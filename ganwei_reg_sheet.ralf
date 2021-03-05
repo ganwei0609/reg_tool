@@ -1,0 +1,59 @@
+
+
+#=====================
+register counter_high {
+    doc {
+
+    }
+    bytes 2;
+    field counter_high @0 {
+        bits   16;
+        access rw;
+        reset  16'h0;
+        doc {
+
+        }
+    } # field: counter_high
+} # register: counter_high
+
+
+#=====================
+register counter_low {
+    doc {
+
+    }
+    bytes 2;
+    field counter_low @0 {
+        bits   16;
+        access rw;
+        reset  16'h0;
+        doc {
+
+        }
+    } # field: counter_low
+} # register: counter_low
+
+
+#=====================
+register invert {
+    doc {
+
+    }
+    bytes 1;
+    field invert @0 {
+        bits   1;
+        access rw;
+        reset  1'h0;
+        doc {
+
+        }
+    } # field: invert
+} # register: invert
+
+block ganwei_reg_sheet {
+bytes 4;
+    register counter_high         @0x0005;
+    register counter_low          @0x0006;
+    register invert               @0x0009;
+}
+
